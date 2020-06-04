@@ -1,5 +1,5 @@
-import forca
-import adivinhacao
+import hangman
+import guessing
 
 def escolhe_jogo():
     print("*********************************")
@@ -12,10 +12,10 @@ def escolhe_jogo():
 
     if (jogo == 1):
         print("Jogando forca")
-        forca.jogar()
+        hangman.jogar()
     elif (jogo == 2):
         print("Jogando adivinhação")
-        adivinhacao.jogar()
+        guessing.jogar()
 
 if (__name__ == "__main__"):
     escolhe_jogo()
