@@ -1,10 +1,19 @@
+import random
 
 def jogar():
     print("\n*********************************")
     print("***    Welcome to Hangman!    ***")
     print("*********************************\n")
 
-    secret_word = "banana".upper()
+    file = open('words.txt', 'r')
+    list_of_words = [word.strip() for word in file]
+    file.close()
+    # with open('words.txt') as file:
+    #   list_of_words = [word.strip() for word in file]
+
+    number = random.randrange(0, len(list_of_words))
+
+    secret_word = list_of_words[number].upper()
     user_word = ['_' for l in secret_word]
     errors = 0
     attempts = 6
